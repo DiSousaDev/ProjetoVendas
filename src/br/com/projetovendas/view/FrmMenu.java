@@ -1,8 +1,5 @@
 package br.com.projetovendas.view;
 
-import java.awt.Graphics;
-import java.awt.Image;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class FrmMenu extends javax.swing.JFrame {
@@ -18,13 +15,6 @@ public class FrmMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ImageIcon icon = new ImageIcon(getClass().getResource("/imagens/fundo.jpg"));
-        Image image = icon.getImage();
-        painelDesktop = new javax.swing.JDesktopPane(){
-            public void paintComponent(Graphics g){
-                g.drawImage(image, 0,0, getWidth(),getHeight(),this);
-            }
-        };
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         lblUsuario = new javax.swing.JLabel();
@@ -49,24 +39,13 @@ public class FrmMenu extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Sigic | Menu Principal");
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
             }
         });
-
-        javax.swing.GroupLayout painelDesktopLayout = new javax.swing.GroupLayout(painelDesktop);
-        painelDesktop.setLayout(painelDesktopLayout);
-        painelDesktopLayout.setHorizontalGroup(
-            painelDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        painelDesktopLayout.setVerticalGroup(
-            painelDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 933, Short.MAX_VALUE)
-        );
 
         jLabel1.setText("Usuário:");
 
@@ -113,7 +92,6 @@ public class FrmMenu extends javax.swing.JFrame {
                 .addComponent(lblNivelAcesso, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
         );
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/clientes.png"))); // NOI18N
         jMenu1.setText("Clientes");
         jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
@@ -128,7 +106,6 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/funcionarios.png"))); // NOI18N
         jMenu2.setText("Funcionários");
         jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
@@ -143,7 +120,6 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fornecedores.png"))); // NOI18N
         jMenu3.setText("Fornecedores");
         jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
@@ -158,7 +134,6 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
-        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/produtos.png"))); // NOI18N
         jMenu4.setText("Produtos");
         jMenu4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
@@ -177,7 +152,6 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
-        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/vendas.png"))); // NOI18N
         jMenu6.setText("Vendas");
         jMenu6.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
@@ -210,7 +184,6 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu6);
 
-        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/configuracoes.png"))); // NOI18N
         jMenu5.setText("Configurações");
         jMenu5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
@@ -225,7 +198,6 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu5);
 
-        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/sair.png"))); // NOI18N
         jMenu7.setText("Sair");
         jMenu7.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jMenu7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -244,13 +216,11 @@ public class FrmMenu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addComponent(painelDesktop)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(painelDesktop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(956, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -375,6 +345,5 @@ public class FrmMenu extends javax.swing.JFrame {
     private javax.swing.JLabel lblUsuario;
     public javax.swing.JMenuItem menu_controle_vendas;
     public javax.swing.JMenuItem menu_posicao;
-    private javax.swing.JDesktopPane painelDesktop;
     // End of variables declaration//GEN-END:variables
 }
